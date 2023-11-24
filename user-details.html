@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+  <title>PCOS SANGAT</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- Add this inside the head section of your HTML file -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.7.0/main.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.7.0/main.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+ 
+  <style>
+.body {
+    background-image: url("img/background.png");
+    background-size: cover;
+
+}
+.box {
+
+    box-sizing: border-box;
+ 
+            background-color: rgb(253, 246, 246);
+          text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding-top: 20px;
+             width: 500px;
+              padding: 100px;
+              margin: 0 auto;
+               margin-top: 90px;
+        }
+
+        h1 {
+            color: rgb(121, 11, 84);
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="date"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 9px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color:rgb(121, 11, 84);/* Red */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(121, 11, 84);; /* Darker Red */
+        }
+
+        p#result {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .additional-features {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .additional-features label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .additional-features input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        /* Add some color to the checkboxes */
+        .additional-features input[type="checkbox"] + label::before {
+            content: " ";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            background-color: #009688; /* Teal */
+            border-radius: 3px;
+            vertical-align: middle;
+        }
+
+        /* Style checked checkboxes */
+        .additional-features input[type="checkbox"]:checked + label::before {
+            background-color: #45bb6f; /* Darker Teal */
+        }
+        
+        .calendar-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ /* Style the dropdown container */
+.dropdown {
+    font-size: 10px;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the button that opens the dropdown */
+  .dropdown button {
+    background-color: rgb(121, 11, 84);
+    color: white;
+    padding: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown content when the button is hovered over */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+</style>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="#"><img src="img/TD Kalayaan (2).png" class="img-responsive" style="width: 50px; margin-top: -16px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class=""><a href="index.html">Services</a></li>
+                <li class=""><a href="index.html">symptoms</a></li>
+                <!--<li class=""><a href="#upload diseases">upload diseases</a></li> -->
+               
+                <!--<li class=""><a href="#upload diseases">upload diseases</a></li> -->
+               <li class="">
+                 <!-- Create the dropdown container -->
+                <div class="dropdown">
+                  <!-- Button to open the dropdown -->
+                  <button><a href="#search diseases"></a>SEARCH DISEASES</button>
+                  <!-- Dropdown content -->
+                  <div class="dropdown-content">
+                    <a href="pcos disease.html">PCOS disease</a>
+                    <a href="#">others..</a>
+                   </li>
+                    <li class=""><a href="Exercises.html">Exercises</a></li>
+                    <li class=""><a href="Diet.html">DIET CHART</a></li>
+                    <li class="" ><a href="contact.html">Contact us </a>
+                <li class=""><a href="survey form.html" >PCOS survey</a>
+                <li class="" id="login-link" style="display: none;"><a href="login.html">Login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li><a href="dashboard.html" id="user-name"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="js/firebase-config.js"></script>
+      <script>
+          // Initialize Firebase
+          if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
+  
+          // Get a reference to the Firestore database
+          var db = firebase.firestore();
+  
+          // Listen for authentication state changes
+          firebase.auth().onAuthStateChanged(function (user) {
+              if (user) {
+                  console.log("User is logged in:", user);
+  
+                  // User is logged in, retrieve their name from Firestore
+                  const userId = user.uid;
+                  const userDetailRef = db.collection("user_details").doc(userId);
+  
+                  userDetailRef.get().then((doc) => {
+                      if (doc.exists) {
+                          console.log("User details found:", doc.data());
+  
+                          const userNameElement = document.getElementById("user-name");
+                          const userData = doc.data();
+                          userNameElement.textContent = "Welcome, " + userData.name;
+                      } else {
+                          console.log("No user details found");
+                      }
+                  }).catch((error) => {
+                      console.log("Error retrieving user details:", error);
+                  });
+              } else {
+                  console.log("User is not logged in");
+                  // User is not logged in, handle this case as needed
+              }
+          });
+      </script>
+      <script>
+        // Initialize Firebase
+        if (!firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+        }
+      
+        // Check the authentication state
+        firebase.auth().onAuthStateChanged(function (user) {
+          const loginLink = document.getElementById("login-link");
+      
+          if (user) {
+            // User is logged in, hide the login link
+            loginLink.style.display = "none";
+          } else {
+            // User is not logged in, show the login link
+            loginLink.style.display = "block";
+          }
+        });
+      </script>
+      <script>
+        // Initialize Firebase and check authentication state
+        // ...
+      
+        // Get the logout link element
+        const logoutLink = document.getElementById("logout-link");
+      
+        // Function to logout the user
+        function logout() {
+          firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+            console.log("User logged out successfully");
+          }).catch(function(error) {
+            // An error happened.
+            console.log("Error logging out user:", error);
+          });
+        }
+      
+        // Listen for authentication state changes
+        firebase.auth().onAuthStateChanged(function (user) {
+          const loginLink = document.getElementById("login-link");
+          const userNameElement = document.getElementById("user-name");
+      
+          if (user) {
+            // User is logged in
+            loginLink.style.display = "none"; // Hide login link
+            logoutLink.style.display = "block"; // Show logout link
+            userNameElement.textContent = "Welcome, " + user.displayName;
+          } else {
+            // User is not logged in
+            loginLink.style.display = "block"; // Show login link
+            logoutLink.style.display = "none"; // Hide logout link
+            userNameElement.textContent = "";
+          }
+        });
+      </script>
+      
+    
+          <section> 
+      
+
+    <div class="box">
+        <h1>Enter Your Details</h1>
+        <div class="form-container">
+            <form id="user-details-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="age">Age:</label>
+                <input type="number" id="age" required>
+                <label for="pcos-history">PCOS Disease History:</label>
+                <textarea id="pcos-history" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="user-details-message" class="success-message"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/user-details.js"></script>
+</body>
+</html>

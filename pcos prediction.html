@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+  <title>PCOS SANGAT</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <!-- Add this inside the head section of your HTML file -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.7.0/main.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.7.0/main.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="firebase-config.js"></script>
+<script src="js/predic.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+
+
+            /* Body background color */
+            body {
+              background-image: url("img/background.png") ;
+                    background-size: cover;
+              
+            }
+            
+        
+            /* Form container styles */
+            .form-container {
+                margin-top: 130px;
+              max-width: 500px;
+              margin: 0 auto;
+              padding: 100px;
+              background-color: rgb(253, 246, 246);
+              border-radius: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+         /* Checkbox label styles */
+            label {
+              display: block;
+              margin-bottom: 10px;
+              font-weight: bold;
+            }
+        
+            /* Checkbox styles */
+            input[type="checkbox"] {
+              transform: scale(1.2);
+            }
+        
+            /* Prediction button styles */
+            button[type="submit"] {
+              display: block;
+              margin-top: 20px;
+              padding: 10px 20px;
+              background-color:rgb(121, 11, 84);
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-size: 16px;
+              cursor: pointer;
+            }
+        
+            /* Prediction result styles */
+            #predictionResult {
+              margin-top: 10px;
+              font-weight: bold;
+              background-color: #e6e6e6;
+              padding: 10px;
+              border-radius: 5px;
+            }
+        
+          </style>
+
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="#"><img src="img/TD Kalayaan (2).png" class="img-responsive" style="width: 50px; margin-top: -16px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li class=""><a href="index.html">Services</a></li>
+                <li class=""><a href="index.html">symptoms</a></li>
+                <!--<li class=""><a href="#upload diseases">upload diseases</a></li> -->
+               
+                <!--<li class=""><a href="#upload diseases">upload diseases</a></li> -->
+               <li class="">
+                 <!-- Create the dropdown container -->
+                <div class="dropdown">
+                  <!-- Button to open the dropdown -->
+                  <button><a href="#search diseases"></a>SEARCH DISEASES</button>
+                  <!-- Dropdown content -->
+                  <div class="dropdown-content">
+                    <a href="pcos disease.html">PCOS disease</a>
+                    <a href="#">others..</a>
+                   </li>
+                    <li class=""><a href="Exercise.html">Exercises</a></li>
+                    <li class=""><a href="Diet.html">DIET CHART</a></li>
+                    <li class="" ><a href="contact.html">Contact us </a>
+                <li class=""><a href="pcos.html" >PCOS survey</a>
+                <li class=""><a href="login.html">logout</a></li>
+                <li><a href="dashboard.html" id="user-name">dashboard</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="js/predic.js"></script>
+        </head>
+        <body>
+          
+          
+        
+          <div class="form-container">
+            <h1 style="text-align: center;">PCOS Disease Prediction Based on Symptoms</h1><br>
+            <form id="symptomForm">
+              <label for="irregularPeriods">
+                <input type="checkbox" id="irregularPeriods" name="symptom" value="irregular periods"> Irregular periods فاسد ماہواری۔
+              </label>
+              <label for="weightGain">
+                <input type="checkbox" id="weightGain" name="symptom" value="weight gain"> Weight gain  وزن کا بڑھاؤ
+              </label>
+              <label for="acne">
+                <input type="checkbox" id="acne" name="symptom" value="acne"> Acne  مںہاسی
+              </label>
+              <label for="excessiveHairGrowth">
+                <input type="checkbox" id="excessiveHairGrowth" name="symptom" value="excessive hair growth"> Excessive hair growth بالوں کی ضرورت سے زیادہ نشوونما
+                
+              </label>
+              <label for="oilySkin">
+                <input type="checkbox" id="oilySkin" name="symptom" value="oily skin"> Oily skin چکنی جلد
+              </label>
+              <label for="thinningHairLoss">
+                <input type="checkbox" id="thinningHairLoss" name="symptom" value="thinning hair or hair loss"> Thinning hair or hair loss بالوں کا پتلا ہونا یا گرنا
+              </label>
+              <label for="hairLoss">
+                <input type="checkbox" id="hairLoss" name="symptom" value="hair loss"> Hair loss بال گرنا
+              </label>
+              <label for="moodSwings">
+                <input type="checkbox" id="moodSwings" name="symptom" value="mood swings"> Mood swings  موڈ بدل جاتا ہے۔
+              </label>
+              <label for="irritability">
+                <input type="checkbox" id="irritability" name="symptom" value="irritability"> Irritability  چڑچڑاپن
+              </label>
+              <!-- Add more symptom checkboxes or other input elements as needed -->
+              <button type="submit">Predict</button>
+            </form>
+        
+            <div id="predictionResult"></div>
+            <div id="successMessage"></div> <!-- Added success message div -->
+          </div>
+          
+          <script>
+            document.getElementById('symptomForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent form submission
+        
+              // Get the selected symptoms
+              var selectedSymptoms = [];
+              var checkboxes = document.getElementsByName('symptom');
+        
+              for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                  selectedSymptoms.push(checkboxes[i].value);
+                }
+              }
+        
+              // Call the predictPCOS() function with the selected symptoms
+              var prediction = predictPCOS(selectedSymptoms);
+        
+              // Get the predictionResult element
+              var predictionResultElement = document.getElementById('predictionResult');
+        
+              // Display the prediction result
+              predictionResultElement.innerHTML = '<p>Prediction: ' + prediction.prediction + '</p><p>' + prediction.additionalInfo + '</p>';
+        
+              // Create a canvas element for the chart
+              var chartCanvas = document.createElement('canvas');
+              chartCanvas.id = 'predictionChart';
+              predictionResultElement.appendChild(chartCanvas);
+        
+              // Create a bar chart using Chart.js
+              var ctx = chartCanvas.getContext('2d');
+              new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  labels: ['High', 'Medium', 'Low', 'None'],
+                  datasets: [{
+                    label: 'Prediction Likelihood',
+                    data: [70, 20, 5, 5], // Replace with actual prediction likelihoods
+                    backgroundColor: ['red', 'orange', 'yellow', 'green']
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true,
+                      max: 100,
+                      title: {
+                        display: true,
+                        text: 'Likelihood (%)'
+                      }
+                    }
+                  }
+                }
+              });
+        
+              return false; // Prevent form submission and page reload
+              var successMessageElement = document.getElementById('successMessage');
+              successMessageElement.innerHTML = 'Prediction result and date updated in Firestore. ';
+            });
+          </script>
+        </body>
+        </html>
+        
+  

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+  <title>PCOS SANGAT</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/langueges.js"></script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="#"><img src="img/TD Kalayaan (2).png" class="img-responsive" ></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#banner">Home</a></li>
+                <li class=""><a href="#service">Services</a></li>
+                <li class=""><a href="#about">symptoms</a></li>
+               <li class="">
+                 <!-- Create the dropdown container -->
+                <div class="dropdown">
+                  <!-- Button to open the dropdown -->
+                  <button><a href="#search diseases"></a>SEARCH DISEASES</button>
+                  <!-- Dropdown content -->
+                  <div class="dropdown-content">
+                    <a href="pcos disease.html">PCOS disease</a>
+                    <a href="#">others..</a>
+                   </li>
+                <li class=""><a href="Exercise.html">Exercises</a></li>
+                <li class=""><a href="Diet.html">DIET CHART</a></li>
+                <li class="" ><a href="contact.html">Contact us </a>
+                <li class=""><a href="survey form.html" >PCOS survey</a>
+                <li class=""><a href="registerr.html">Register</a></li>
+                <li class="" id="login-link" style="display: none;"><a href="login.html">Login</a></li>
+                <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                <li><a href="dashboard.html" id="user-name"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script>
+    
+
+        // Initialize Firebase
+        if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+        // Get a reference to the Firestore database
+        var db = firebase.firestore();
+
+        // Listen for authentication state changes
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log("User is logged in:", user);
+
+                // User is logged in, retrieve their name from Firestore
+                const userId = user.uid;
+                const userDetailRef = db.collection("user_details").doc(userId);
+
+                userDetailRef.get().then((doc) => {
+                    if (doc.exists) {
+                        console.log("User details found:", doc.data());
+
+                        const userNameElement = document.getElementById("user-name");
+                        const userData = doc.data();
+                        userNameElement.textContent = "Welcome, " + userData.name;
+                    } else {
+                        console.log("No user details found");
+                    }
+                }).catch((error) => {
+                    console.log("Error retrieving user details:", error);
+                });
+            } else {
+                console.log("User is not logged in");
+                // User is not logged in, handle this case as needed
+            }
+        });
+    </script>
+    <script>
+      // Initialize Firebase
+      if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+      }
+    
+      // Check the authentication state
+      firebase.auth().onAuthStateChanged(function (user) {
+        const loginLink = document.getElementById("login-link");
+    
+        if (user) {
+          // User is logged in, hide the login link
+          loginLink.style.display = "none";
+        } else {
+          // User is not logged in, show the login link
+          loginLink.style.display = "block";
+        }
+      });
+    </script>
+    <script>
+      // Initialize Firebase and check authentication state
+      // ...
+    
+      // Get the logout link element
+      const logoutLink = document.getElementById("logout-link");
+    
+      // Function to logout the user
+      function logout() {
+        firebase.auth().signOut().then(function() {
+          // Sign-out successful.
+          console.log("User logged out successfully");
+        }).catch(function(error) {
+          // An error happened.
+          console.log("Error logging out user:", error);
+        });
+      }
+    
+      // Listen for authentication state changes
+      firebase.auth().onAuthStateChanged(function (user) {
+        const loginLink = document.getElementById("login-link");
+        const userNameElement = document.getElementById("user-name");
+    
+        if (user) {
+          // User is logged in
+          loginLink.style.display = "none"; // Hide login link
+          logoutLink.style.display = "block"; // Show logout link
+          userNameElement.textContent = "Welcome, " + user.displayName;
+        } else {
+          // User is not logged in
+          loginLink.style.display = "block"; // Show login link
+          logoutLink.style.display = "none"; // Hide logout link
+          userNameElement.textContent = "";
+        }
+      });
+    </script>
+      <div class="container">
+        <div class="row">
+          <div class="banner-info">
+            <div class="banner-logo text-center">
+              <img src="img/" class="img-responsive" alt="some_text" style="opacity:0.3;filter:alpha(opacity=80);"/>
+            </div>
+            <div class="banner-text text-center">
+              <h1 class="white"> <p style="color: rgb(59, 6, 31);">"FIGHT against PCOS AND SAVE YOUR LIFE"</p></h1>
+               <p style="color: rgb(59, 6, 31);">Just like every person is different, PCOS symptoms and experiences can be different as well.</p>
+               <a href="pcos prediction.html"class="btn btn-appoint"> Disease prediction </a>
+               <a href="period tracker.html"class="btn btn-appoint">Track Menstrual cycle</a>
+               <!-- <a href="register/"class="btn btn-appoint">user-registration </a>
+              <a href="Login/"class="btn btn-appoint">user-login</a>
+             -->
+            </div>
+            <div class="overlay-detail text-center">
+              <a href="#service"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ banner-->
+  
+  <!--service-->
+  <section id="service" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <h2 class="ser-title">Our Service</h2>
+          <hr class="botm-line">
+          <p>pcos treatment services focuses on managing your individual concerns such as infertility, hirsutism, acni or obesity. specific treatment might involve lifestyle changes or madication</div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-stethoscope"></i>
+            </div>
+            <div class="icon-info">
+              <h4>diagnose PCOS</h4>
+              <p>There's no single test to specifically diagnose polycystic ovary syndrome (PCOS). Your health care provider is likely to start with a discussion of your symptoms, medications and any other medical conditions. Your provider also may ask about your menstrual periods and any weight changes. A physical exam includes checking for signs of excess hair growth, insulin resistance and acne.
+              </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-ambulance"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Emergency Services</h4>
+              <p> Your provider will work with you to develop a care plan that may include one or more of these treatment options.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-user-md"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Medical Counseling</h4>
+              <p>Polycystic Ovary Syndrome Program specialists are all in one place to better help you manage symptoms and provide properly medical counseling </p>
+            </div>
+          </div>
+          <div class="service-info">
+            <div class="icon">
+              <i class="fa fa-tasks"></i>
+            </div>
+            <div class="icon-info">
+              <h4>Causes</h4>
+              <p>The exact cause of PCOS is unknown.<br>
+                Factors that might play a role include: Excess androgen: the ovaries produce abnormally high levels of androgen (male hormone).
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ service-->
+  <!--cta-->
+  <section id="cta-1" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="schedule-tab">
+          <div class="col-md-3 col-sm-3 bor-left">
+            <div class="mt-boxy-color"></div>
+            <div class="medi-info">
+              <h3>Emergency Case</h3>
+              <p>Depending on your symptoms, you may need to be hospitalized. Severe cases may require surgery, which may be minimally invasive or a standard open procedure3.
+              </p>
+              <a href="#" class="medi-info-btn">READ MORE</a>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-5">
+            <div class="medi-info">
+              <h3>Normal Case</h3>
+              <p>
+                Follow a healthy diet that is low in calories and saturated fat<br>
+                Engage in moderate physical activity and weight training<br>
+                Check your gut health and eat anti-inflammatory food<br>
+                Take supplements or medications as prescribed by your doctor<br>
+                Seek support from others who have PCOS or a health professional<br>
+                </p> 
+              <a href="#" class="medi-info-btn">READ MORE</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 mt-boxy-3">
+            <div class="mt-boxy-color"></div>
+            <div class="time-info">
+              <h3>Opening Hours</h3>
+              <table style="margin: 8px 0px 0px;" border="1">
+                <tbody>
+                  <tr>
+                    <td>Sunday - Monday</td>
+                    <td>9.00am - 9.00pm</td>
+                  
+                  </tr>
+                  <tr>
+                    <td>OPD Timing </td>
+                    <td>9.00 am - 2.00 pm <br>
+                      Civil Hospital quetta Balochistan
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Clinic time-info</td>
+                    <td>5.00 am - 9.00 pm<br>
+                       Meet our Doctors
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--cta-->
+  <!--about-->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+          <div class="section-title" >
+            <h1 style="text-align:center;">symptom</h1>
+
+            <div class="row">
+              <div class="column">
+                <img src="img/first.jpg" alt="symptom" style="width:100%" height="40%">
+              </div>
+          </div>
+               <a href="" style="color: #0cb8b6; padding-top:10px;"></a>
+          </div>
+        </div>
+  </section> 
+
+  <!--/ about-->
+  <!--doctor team-->
+  <section id="doctor-team" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">Meet Our Doctors!</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="img/rohan'.png" alt="doctor pic" class="team-img">
+            <div class="caption">
+              <h3>Pro. DR.Rohana Salam</h3>
+              
+              <ul class="list-inline">
+                <li> <p>  <b> City international Hospital <br> 5.00 - 9.00 pm</b> </p></li>
+               <!--  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="img/zubia.jpg" alt="doctor pic 2" class="team-img">
+            <div class="caption">
+              <h3>Dr. Zubia Bugti</h3>
+             
+              <ul class="list-inline">
+                <li> <p>  <b> Nusrat Hospital Satellite Twon <br> 5.00 - 9.00 pm</b> </p></li>
+              <!--   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-6">
+          <div class="thumbnail">
+            <img src="img/clipart-girl-doctor-13.png" alt="doctor pic 3" class="team-img">
+            <div class="caption">
+              <h3>Dr. khadija Saif</h3>
+             
+              <ul class="list-inline">
+                <li> <p>  <b> Mideant Hospital Al......<br> 5.00 - 9.00 pm</b> </p></li>
+                <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+  </section>
+  <!--/ doctor team-->
+  <!--testimonial-->
+  <section id="testimonial" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">see what patients are saying?</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="testi-details">
+            <!-- Paragraph -->
+            <p>Feedback</p>
+          </div>
+          <div class="testi-info">
+            <!-- User Image -->
+            <a href="#"><img src="img/" alt="Dp" class="img-responsive"></a>
+            <!-- User Name -->
+            <h3>patient<span>Name</span></h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="testi-details">
+            <!-- Paragraph -->
+            <p>Feedback</p>
+          </div>
+          <div class="testi-info">
+            <!-- User Image -->
+            <a href="#"><img src="img/" alt="Dp" class="img-responsive"></a>
+            <!-- User Name -->
+            <h3>patient<span>Name</span></h3>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="testi-details">
+            <!-- Paragraph -->
+            <p>Feedback</p>
+          </div>
+          <div class="testi-info">
+            <!-- User Image -->
+            <a href="#"><img src="img/" alt="Dp" class="img-responsive"></a>
+            <!-- User Name -->
+            <h3>patient<span>Name</span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ testimonial-->
+  <!--cta 2-->
+  <section id="cta-2" class="section-padding">
+    <div class="container">
+      <div class=" row">
+        <div class="col-md-2"></div>
+        <div class="text-right-md col-md-4 col-sm-4">
+          <h2 class="section-title white lg-line">� A few words<br> about us �</h2>
+        </div>
+        <div class="col-md-4 col-sm-5">
+          <p style="color:white;">We often search for a simple solution or a quick fix to treat PCOS.
+          let's be real now.<br>Any supplement, diet, or approach said to be a quick fix or 'cure' to PCOS is nonsense. 
+          here is no quick fix or 'cure' to PCOS.<br>Quick fixes will lead to short term results Our desire to achieve the 'perfect' body,We need to remember healthy looks different on each person. We are all different.
+           We are not clones.<br>Our bodies and lifestyles are different(whether it's height, genes, amount of lean muscle, activity level, lifestyle habits like sleep, health of the metabolism, thyroid etc).
+          </style> </p> </b> <p class="text-right text-primary"><i>� pcos sangat</i></p>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--cta-->
+  <!--contact-->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="ser-title">Contact us</h2>
+          <hr class="botm-line">
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <h3>Contact Info</h3>
+          <div class="space"></div>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i> location<br> University of Balochistan</p>
+          <div class="space"></div>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>Mail:<br> Parukh321@gmail.com</p>
+          <div class="space"></div>
+          <p><a href="contact.html" class="nav-item nav-link">Contact us </a></p>
+        </div>
+        <!-- <div class="col-md-8 col-sm-8 marb20">
+          <div class="contact-info">
+            <h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>
+            <div class="space"></div>
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ contact-->
+  <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">About Us</h4>
+            </div>
+            <div class="info-sec">
+              <p>The primary purpose of a PCOS sangat must be to increase awareness of PCOS
+                and to provide health care information on that disease 
+                and its management.being aware of a disease and its symptoms means people are 
+              more likely to take preventative actions, and go for screening, test, and checkups </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Quick Links</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="quick-info">
+                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
+                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Follow us</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="social-icon">
+                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="credits">
+          
+              Designedddd by <a>student of UOB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+  
+</body>
+
+</html>

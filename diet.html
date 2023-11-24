@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Diet page</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    <style>
+               
+
+    /*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    background-image: url("img/esr.png");
+    color:  rgb(121, 11, 84);
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color:  rgb(121, 11, 84);
+}
+
+a {
+    color: rgb(121, 11, 84);
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color:  rgb(121, 11, 84);
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #F7CAC9;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    background:  rgb(121, 11, 84);
+}
+
+.back-to-top:hover i {
+    color: #F7CAC9;
+}
+
+.back-to-top i {
+    color: rgb(121, 11, 84);
+    padding-top: 10px;
+}
+
+
+/**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+.top-bar {
+    position: relative;
+    height: 35px;
+    background:  rgb(121, 11, 84);
+}
+
+.top-bar .top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 35px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .text:last-child {
+    border-right: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .text i {
+    font-size: 13px;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.top-bar .text h2 {
+    color: #eeeeee;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.top-bar .text p {
+    color: #eeeeee;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 0 5px;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 35px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    border-right: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .social a:hover {
+    color:  rgb(121, 11, 84);
+    background: #ffffff;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px;
+    }
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px  rgb(121, 11, 84);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .5s;
+    
+}
+
+.navbar .navbar-brand span {
+    color: rgb(121, 11, 84);
+    text-transform: lowercase;
+    transition: .5s;
+}
+
+.navbar.nav-sticky .navbar-brand span {
+    color: #ffffff;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: rgb(121, 11, 84);
+    transition: none;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 3px;
+        padding: 25px 60px;
+        background:  rgb(121, 11, 84) !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background:  rgb(121, 11, 84)!important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 8px 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .navbar {
+        padding: 15px;
+        background:rgb(121, 11, 84);
+    }
+    
+    .navbar .navbar-brand span {
+        color: #ffffff;
+    }
+    
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+/* Style the dropdown container */
+.dropdown {
+    font-size: 14px;
+    padding: 1px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the button that opens the dropdown */
+  .dropdown button {
+    background-color: rgb(121, 11, 84);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown content when the button is hovered over */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+ .row {
+    line-height: 1.6;
+    text-align: justify;
+ }
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.hero {
+    background: url('../img/met.png') no-repeat fixed;
+	background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.hero .container-fluid {
+    padding: 0;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+}
+
+.hero .hero-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.hero .hero-text {
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text h1 {
+    color:rgb(121, 11, 84);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero .hero-text p {
+    color:rgb(121, 11, 84);
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero .hero-btn .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #F7CAC9;
+    background:rgb(121, 11, 84);
+    border-radius: 0;
+    transition: .3s;
+}
+
+.hero .hero-btn .btn:hover {
+    color:rgb(121, 11, 84);
+    background: #ffffff;
+}
+
+.hero .hero-btn .btn:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .hero .hero-text {
+        padding: 0 15px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 12px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero .hero-text h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .hero .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 10px 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .hero .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 8px 10px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+/***************************************
+footer
+***************************************/
+#footer{
+	background-color: rgb(121, 11, 84);
+}
+.ftr-tle {
+    height: 50px;
+}
+.info-sec {
+    color: #fff;
+}
+.quick-info li i {
+    font-size: 8px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: left;
+}
+.social-icon li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+.bglight-blue {
+    background-color: #3498DB;
+}
+.bgred {
+    background-color: #E74C3C;
+}
+.bgdark-blue {
+    background-color: #2C3E50;
+}
+.bglight-blue {
+    background-color: #3498DB;
+}
+.top-footer {
+    padding: 40px 0px;
+    border-bottom: 1px solid rgba(207, 98, 184, 0.12);
+}
+.footer-line {
+    padding: 30px 0px;
+    color: #fff;
+}
+
+.footer-line a {
+    color: #cc69a0;
+}
+
+.quick-info li a{
+    color: #fff;
+}
+.site-link, .site-link:hover, .site-link:focus
+{
+    color: #c0319c;
+    text-transform: none;
+}
+@media (min-width: 551px) and (max-width: 980px){
+
+}
+@media (min-width: 220px) and (max-width: 551px){
+    .testi-info{
+        margin-bottom: 20px;
+    }
+    .marb20{
+        margin-top: 30px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .section-title{
+        margin-bottom: 30px;
+    }
+    .medi-info {
+    border: 0px;
+    border-bottom: 1px solid #fff;
+    }
+    .service-info{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .caption h3 {
+    font-size: 14px;
+    }
+    .caption p{
+    font-size: 12px;
+    padding-bottom: 5px;
+    }
+    .caption ul li a i{
+        font-size: 14px;
+    }
+    .banner-text h1{
+        font-size: 24px;
+    }
+}
+.discount {
+    position: relative;
+    width: 100%;
+    margin: 45px 0;
+    padding: 90px 0;
+    background: linear-gradient(rgba(247, 202, 201, .7), rgba(247, 202, 201, .7)), url(../img/daik.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.btn-mt{
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    color: white;
+    background:rgb(121, 11, 84);
+    
+}
+   
+
+
+
+    </style>
+       
+    </head>
+
+    <body>
+      
+       <!-- Nav Bar Start -->
+        
+       <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a class="navbar-brand" href="#"><img src="img/TD Kalayaan (2).png" class="img-responsive" style="width: 50px; margin-top: -16px;"></a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="index.html" class="nav-item nav-link">SARVICES</a>
+                    <a href="index.html" class="nav-item nav-link">SYMTOMS</a>
+                    <li class="">
+                        <!-- Create the dropdown container -->
+                       <div class="dropdown">
+                         <!-- Button to open the dropdown -->
+                         <button><a href="#search diseases"></a>SEARCH DISEASES</button>
+                         <!-- Dropdown content -->
+                         <div class="dropdown-content">
+                           <a href="pcos disease.html">PCOS disease</a>
+                           <a href="#">others..</a>
+                          </li>
+                    <a href="Exercise.html" class="nav-item nav-link">EXERCISES</a>
+                    <li href="Diet.html" class="nav-item nav-link">DIET CHART</li>
+                    <a href="contact.html" class="nav-item nav-link"> Contact us </a>
+                    <a href="survey form.html" class="nav-item nav-link">PCOS SURVEY</a>
+                    <a class="nav-item nav-link" id="login-link" style="display: none;">Login</a>
+                    <a class="nav-item nav-link" id="logout-link" href="#" onclick="logout()" style="display: none;">Logout</a>
+                <a class="nav-item nav-link" href="dashboard.html" id="user-name"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="js/firebase-config.js"></script>
+      <script>
+          // Initialize Firebase
+          if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
+  
+          // Get a reference to the Firestore database
+          var db = firebase.firestore();
+  
+          // Listen for authentication state changes
+          firebase.auth().onAuthStateChanged(function (user) {
+              if (user) {
+                  console.log("User is logged in:", user);
+  
+                  // User is logged in, retrieve their name from Firestore
+                  const userId = user.uid;
+                  const userDetailRef = db.collection("user_details").doc(userId);
+  
+                  userDetailRef.get().then((doc) => {
+                      if (doc.exists) {
+                          console.log("User details found:", doc.data());
+  
+                          const userNameElement = document.getElementById("user-name");
+                          const userData = doc.data();
+                          userNameElement.textContent = "Welcome, " + userData.name;
+                      } else {
+                          console.log("No user details found");
+                      }
+                  }).catch((error) => {
+                      console.log("Error retrieving user details:", error);
+                  });
+              } else {
+                  console.log("User is not logged in");
+                  // User is not logged in, handle this case as needed
+              }
+          });
+      </script>
+      <script>
+        // Initialize Firebase
+        if (!firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+        }
+      
+        // Check the authentication state
+        firebase.auth().onAuthStateChanged(function (user) {
+          const loginLink = document.getElementById("login-link");
+      
+          if (user) {
+            // User is logged in, hide the login link
+            loginLink.style.display = "none";
+          } else {
+            // User is not logged in, show the login link
+            loginLink.style.display = "block";
+          }
+        });
+      </script>
+      <script>
+        // Initialize Firebase and check authentication state
+        // ...
+      
+        // Get the logout link element
+        const logoutLink = document.getElementById("logout-link");
+      
+        // Function to logout the user
+        function logout() {
+          firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+            console.log("User logged out successfully");
+          }).catch(function(error) {
+            // An error happened.
+            console.log("Error logging out user:", error);
+          });
+        }
+      
+        // Listen for authentication state changes
+        firebase.auth().onAuthStateChanged(function (user) {
+          const loginLink = document.getElementById("login-link");
+          const userNameElement = document.getElementById("user-name");
+      
+          if (user) {
+            // User is logged in
+            loginLink.style.display = "none"; // Hide login link
+            logoutLink.style.display = "block"; // Show logout link
+            userNameElement.textContent = "Welcome, " + user.displayName;
+          } else {
+            // User is not logged in
+            loginLink.style.display = "block"; // Show login link
+            logoutLink.style.display = "none"; // Hide logout link
+            userNameElement.textContent = "";
+          }
+        });
+      </script>
+
+
+    <!-- Hero Start -->
+    <div class="hero">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-md-6">
+                    <div class="hero-text">
+                        <h1> Diet Plan</h1>
+                        <p>
+                            "Exercise is king, nutrition is Queen, put them together,<br> and you've got a kingdom." 
+                         <i> - Anonymous</i>
+                         <br>
+                         
+                         
+                        </p>
+                        <a class=" btn-mt" href="calries.html">Daily Calorie Intake Calculator</a>
+                    </div>
+
+                  
+                </div>
+
+                <div class="col-sm-12 col-md-6 d-none d-md-block">
+                    <div class="hero-image">
+                        
+                     <!--  <img src="img/" alt="Hero Image"-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+<!-- 
+    <div class="chart" >
+        
+
+
+        <div class="row">
+            <div class="column">
+                <h2> Diet Chart </h2>
+                <img src="img/shi.png" alt="symptom" style="width:90%" > 
+    
+            </div>
+            <div class="column">
+                <h2> Diet Chart </h2>
+    <img src="img/shi.png" alt="symptom" style="width: 90%">  </div>
+             
+            </div>
+           
+   
+
+        <!-- About Start-->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="about-img">
+                            <img src="img/jan.jpg" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Learn About Us</p>
+                            <h3><small> Can Your Diet Relieve Symptoms of Polycystic Ovary Syndrome (PCOS)?</small> </h3>
+                        </div>
+                        <div class="about-text">
+                            <p>
+     
+                                Many people with PCOS find that they’re able to manage their symptoms by making changes to their diet.
+                                 This often includes consuming more high-fiber foods and lean protein, and limiting refined carbohydrates and sugary foods.
+                                 <br>If you have PCOS, you may feel frustrated at times. Eating a PCOS-friendly diet and making some lifestyle changes may help improve your mood and reduce some of the associated symptoms of PCOS.
+<br>
+                                <br> <b> Note</b> that on a PCOS diet, there are some foods you may want to limit or avoid. However, in many instances, these foods have nutritious, beneficial counterparts. 
+                                 For example, if you commonly eat margarine and white toast for breakfast, try substituting high fiber whole-grain bread and olive oil or avocado..
+                            </p>
+                        
+                            <a class="btn" href="recipes.html">Recipes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+ 
+       
+
+        <!-- Service Start -->
+        <div class="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>What we do</p><br>
+                    <h2>Diet In PCOS</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <h3>Vagetables</h3>
+                            <p>
+                                There is no single most healthy vegetable, but eating a variety of vegetables can improve health and well-being. 
+                              
+                                All vegetables contain healthful vitamins, minerals, and dietary fiber — but some stand out for their exceptional benefits
+                               <I> </I>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item active">
+                            <div class="service-icon">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+                            <h3>Meat</h3>
+                            <p>
+                                Of the many nutrients that meat contains, it is rich in iron, zinc and selenium. While iron helps in forming 
+                                hemoglobin that transports oxygen to different parts of your body, zinc helps in tissue formation and metabolism as well as selenium breaks down the fat and chemicals in the body
+                             
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h3>Fruits</h3>
+                            <p>
+                                Fruits health benefits includes controlling blood sugar levels, preventing multi-morbidity,
+                                 promoting bone health, promoting weight loss, treating indigestion, supporting cardiovascular health, enhancing the skin, 
+                                 promoting hair growth, and boosting energy levels.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-cheese"></i>
+                            </div>
+                            <h3>Dairy</h3>
+                            <p>
+                                Dairy products are loaded with essential vitamins and minerals, including carbohydrates, protein, calcium, phosphorus, potassium, 
+                                vitamins A, D, B12, riboflavin and niacin.
+
+Just one 8-ounce serving of milk has 8 grams of protein, which builds and repairs muscle tissue (an equal serving of almond beverage has only 1 gram of protein).
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3>Seeds</h3>
+                            <p>
+                                Seeds are a versatile ingredient that can be used to add a quick pop of texture and nutrition to nearly any meal. From chia seed pudding to roasted pumpkin
+                                 seeds to pine nut pesto and beyond, there are endless ways to squeeze in your daily dose of the healthiest seeds while bumping up your intake of protein, fiber and heart-healthy fats.
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3>Leafy</h3>
+                            <p>
+                                
+                              
+                                 Low in calories, yet high in fiber, vitamins, and phytonutrients,
+                                 the benefits of leafy greens are incredible for your health in more ways than you would even suspect.
+                                 If you struggle with bloating it’s likely caused by your diet, 
+                                 a hormone imbalance, gut infections, or other digestive issues such as leaky gut, SIBO, or Candida overgrowth. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        <!-- Team Start -->
+        <div>
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>nutritions</p>
+                    <h2>Our Nutritionsts</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/didi.webp" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@RABIYAANSAR/featured"><i class="fab fa-youtube"></i></a>
+                                    <a href="kaynatrabi@gmail.com"><i class="fab fa-facebook"></i></a>
+                                    <a href="pinterest.ie/didititian"><i class="fab fa-pinterest"></i></a>
+                                    <a href="instagram.com/didititian_rd"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Didi de Zwarte</h2>
+                                <p>Dietitian</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/Dr. Ayesha Abbas.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@DrAyeshaAbbas/featured"><i class="fab fa-youtube"></i></a>
+                                    <a href="https://www.facebook.com/www.drayeshanutritionist/"><i class="fab fa-facebook-f"></i></a>
+                                  
+                                    <a href="https://www.instagram.com/dr_ayeshanutritionist/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Dr. Ayesha Abbas</h2>
+                                <p>Dietitian/Nutritionist</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/dr AMINA.png" alt="Image">
+                                <div class="team-social">
+                                    <a href="instagram.com/dr._amina_hassan"><i class="fab fa-youtube"></i></a>
+                                   
+                                    <a href="facebook.com/groups/211803987238106"><i class="fab fa-facebook-f"></i></a>
+                                   
+                                    <a href="https://www.instagram.com/dr._amina_hassan/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2> dr Amina hassan</h2>
+                                <p>PCOS Dietitian </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/dr rabia.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@RABIYAANSAR"><i class="fab fa-youtube"></i></a>
+                                  
+                                    <a href="https://www.instagram.com/drrabiyaansar/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Dr Rabia Ansar </h2>
+                                <p>PCOS Dietitian</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div>
+        <!-- Team End -->
+
+
+        <!-- Blog Start -->
+        <div class="blog">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>From Blog</p>
+                    <h2>Latest Yoga Articles</h2>
+                </div>
+                <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/PCOS-diet-ar.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Amanda Stathos</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>  a clinical dietitian at Johns Hopkins’ Sibley Memorial Hospital,</p>
+                                <!-- <p><i class="far fa-calendar-alt">2023</i> </p>-->
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>PCOS: Why Diet Matters</p>
+                            <a class="btn" href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/pcos-diet">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/fru.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Maedica (Bucur). 2021 Sep; 16(3)</h2>
+                            <div class="blog-meta">
+                                 <p><i class="far fa-list-alt"></i>Dietary Patterns and Polycystic Ovary Syndrome: a Systematic Review</p>
+                               <!-- <p><i class="far fa-calendar-alt"></i>February 27, 2022
+                                </p>
+                                <p><i class="far fa-comments"></i>5</p> -->
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <a class="btn" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8643565/">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/DAIRY.webp" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>About Medical News Today</h2>
+                            <div class="blog-meta">
+                               <p><i class="far fa-list-alt"></i>What to eat if you have PCOS</p>
+                               <!--   <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p>-->
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <a class="btn" href="https://www.medicalnewstoday.com/articles/323002">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/artical.webp" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>By Angela Grassi</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>PCOS Diet: What to Eat to Manage Symptoms
+                                </p>
+                               <!-- <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p> -->
+                            </div>
+                            <p>
+                             
+                            </p>
+                            <a class="btn" href="https://www.verywellhealth.com/what-is-the-best-diet-for-pcos-2616314">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/artical 2.webp" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Losing Weight With PCOS</h2>
+                            <div class="blog-meta">
+                               <!-- <p><i class="far fa-list-alt"></i>Body Fitness</p>
+                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p> -->
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <a class="btn" href="https://www.healthline.com/nutrition/how-to-lose-weight-with-pcos">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/artical3.webp" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>By Melissa Groves Azzaro</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>PCOS Meal Plan: What to Eat to Help with Your Symptoms and Support Your Overall Health</p>
+                               <!--- <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p> -->
+                            </div>
+                            <p>
+                               
+                            </p>
+                            <a class="btn" href="https://www.eatingwell.com/article/7920027/pcos-meal-plan/">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+   <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">About Us</h4>
+            </div>
+            <div class="info-sec">
+              <p>The primary purpose of a PCOS sangat must be to increase awareness of PCOS
+                and to provide health care information on that disease 
+                and its management.being aware of a disease and its symptoms means people are 
+              more likely to take preventative actions, and go for screening, test, and checkups </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Quick Links</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="quick-info">
+                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
+                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Follow us</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="social-icon">
+                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
+              -->
+              Designed by <a>student of UOB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

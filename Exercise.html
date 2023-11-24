@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise page</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    <style>
+               
+
+    /*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    background-image: url("img/esr.png");
+    color:  rgb(121, 11, 84);
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color:  rgb(121, 11, 84);
+}
+
+a {
+    color: rgb(121, 11, 84);
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color:  rgb(121, 11, 84);
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #F7CAC9;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    background:  rgb(121, 11, 84);
+}
+
+.back-to-top:hover i {
+    color: #F7CAC9;
+}
+
+.back-to-top i {
+    color: rgb(121, 11, 84);
+    padding-top: 10px;
+}
+
+
+/**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+.top-bar {
+    position: relative;
+    height: 35px;
+    background:  rgb(121, 11, 84);
+}
+
+.top-bar .top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 35px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .text:last-child {
+    border-right: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .text i {
+    font-size: 13px;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.top-bar .text h2 {
+    color: #eeeeee;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.top-bar .text p {
+    color: #eeeeee;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 0 5px;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 35px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    border-right: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid  rgb(121, 11, 84);
+}
+
+.top-bar .social a:hover {
+    color:  rgb(121, 11, 84);
+    background: #ffffff;
+}
+
+@media (min-width: 992px) {
+    .top-bar {
+        padding: 0 60px;
+    }
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px  rgb(121, 11, 84);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .5s;
+    
+}
+
+.navbar .navbar-brand span {
+    color: rgb(121, 11, 84);
+    text-transform: lowercase;
+    transition: .5s;
+}
+
+.navbar.nav-sticky .navbar-brand span {
+    color: #ffffff;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    padding: 10px 10px 8px 10px;
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: rgb(121, 11, 84);
+    transition: none;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        top: 3px;
+        padding: 25px 60px;
+        background:  rgb(121, 11, 84) !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background:  rgb(121, 11, 84)!important;
+    }
+    
+    .navbar a.nav-link {
+        padding: 8px 15px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .navbar {
+        padding: 15px;
+        background:rgb(121, 11, 84);
+    }
+    
+    .navbar .navbar-brand span {
+        color: #ffffff;
+    }
+    
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+/* Style the dropdown container */
+.dropdown {
+    font-size: 14px;
+    padding: 1px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the button that opens the dropdown */
+  .dropdown button {
+    background-color: rgb(121, 11, 84);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown content when the button is hovered over */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+ .row {
+    line-height: 1.6;
+    text-align: justify;
+ }
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.hero {
+    background: url('../img/et.png') no-repeat fixed;
+	background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 200px 0;
+    overflow: hidden;
+}
+
+.hero .container-fluid {
+    padding: 0;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+}
+
+.hero .hero-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.hero .hero-text {
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text h1 {
+    color:rgb(121, 11, 84);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero .hero-text p {
+    color:rgb(121, 11, 84);
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero .hero-btn .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #F7CAC9;
+    background:rgb(121, 11, 84);
+    border-radius: 0;
+    transition: .3s;
+}
+
+.hero .hero-btn .btn:hover {
+    color:rgb(121, 11, 84);
+    background: #ffffff;
+}
+
+.hero .hero-btn .btn:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .hero .hero-text {
+        padding: 0 15px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 12px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero .hero-text h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .hero .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 10px 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    
+    .hero .hero-text p {
+        font-size: 14px;
+    }
+    
+    .hero .hero-text .btn {
+        padding: 8px 10px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+/***************************************
+footer
+***************************************/
+#footer{
+	background-color: rgb(121, 11, 84);
+}
+.ftr-tle {
+    height: 50px;
+}
+.info-sec {
+    color: #fff;
+}
+.quick-info li i {
+    font-size: 8px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: left;
+}
+.social-icon li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+.bglight-blue {
+    background-color: #3498DB;
+}
+.bgred {
+    background-color: #E74C3C;
+}
+.bgdark-blue {
+    background-color: #2C3E50;
+}
+.bglight-blue {
+    background-color: #3498DB;
+}
+.top-footer {
+    padding: 40px 0px;
+    border-bottom: 1px solid rgba(207, 98, 184, 0.12);
+}
+.footer-line {
+    padding: 30px 0px;
+    color: #fff;
+}
+
+.footer-line a {
+    color: #cc69a0;
+}
+
+.quick-info li a{
+    color: #fff;
+}
+.site-link, .site-link:hover, .site-link:focus
+{
+    color: #c0319c;
+    text-transform: none;
+}
+@media (min-width: 551px) and (max-width: 980px){
+
+}
+@media (min-width: 220px) and (max-width: 551px){
+    .testi-info{
+        margin-bottom: 20px;
+    }
+    .marb20{
+        margin-top: 30px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .section-title{
+        margin-bottom: 30px;
+    }
+    .medi-info {
+    border: 0px;
+    border-bottom: 1px solid #fff;
+    }
+    .service-info{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .caption h3 {
+    font-size: 14px;
+    }
+    .caption p{
+    font-size: 12px;
+    padding-bottom: 5px;
+    }
+    .caption ul li a i{
+        font-size: 14px;
+    }
+    .banner-text h1{
+        font-size: 24px;
+    }
+}
+
+.calculator {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    display: inline-block;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: rgb(121, 11, 84);
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+select, input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    background-color:rgb(121, 11, 84);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+    </style>
+       
+    </head>
+
+    <body>
+        <!-- Top Bar Start 
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="far fa-clock"></i>
+                                <h2>8:00 - 9:00</h2>
+                                <p>Mon - Fri</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <h2>+123 456 7890</h2>
+                                <p>For Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                    
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                       
+                <a class="navbar-brand" href="#"><img src="img/TD Kalayaan (2).png" class="img-responsive" style="width: 50px; margin-top: -16px;"></a>
+
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="index.html" class="nav-item nav-link">SERVICES</a>
+                        <a href="index.html" class="nav-item nav-link">SYMPTOMS</a>
+                        <li class="">
+                            <!-- Create the dropdown container -->
+                           <div class="dropdown">
+                             <!-- Button to open the dropdown -->
+                             <button><a href="#search diseases"></a>SEARCH DISEASES</button>
+                             <!-- Dropdown content -->
+                             <div class="dropdown-content">
+                               <a href="pcos disease.html">PCOS disease</a>
+                               <a href="#">others..</a>
+                              </li>
+                        <a href="Exercise.html" class="nav-item nav-link">EXERCISES</a>
+                        <a href="Diet.html" class="nav-item nav-link">DIET CHART</a>
+                        <a href="contact.html" class="nav-item nav-link"> Contact us </a>
+                        <a href="survey form.html" class="nav-item nav-link">PCOS Survey</a>
+                        <a class="nav-item nav-link" id="login-link" style="display: none;">Login</a>
+                        <a class="nav-item nav-link" id="logout-link" href="#" onclick="logout()" style="display: none;">Logout</a>
+                <a class="nav-item nav-link" href="dashboard.html" id="user-name"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src="js/firebase-config.js"></script>
+        <script>
+            // Initialize Firebase
+            if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+    
+            // Get a reference to the Firestore database
+            var db = firebase.firestore();
+    
+            // Listen for authentication state changes
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    console.log("User is logged in:", user);
+    
+                    // User is logged in, retrieve their name from Firestore
+                    const userId = user.uid;
+                    const userDetailRef = db.collection("user_details").doc(userId);
+    
+                    userDetailRef.get().then((doc) => {
+                        if (doc.exists) {
+                            console.log("User details found:", doc.data());
+    
+                            const userNameElement = document.getElementById("user-name");
+                            const userData = doc.data();
+                            userNameElement.textContent = "Welcome, " + userData.name;
+                        } else {
+                            console.log("No user details found");
+                        }
+                    }).catch((error) => {
+                        console.log("Error retrieving user details:", error);
+                    });
+                } else {
+                    console.log("User is not logged in");
+                    // User is not logged in, handle this case as needed
+                }
+            });
+        </script>
+        <script>
+          // Initialize Firebase
+          if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+          }
+        
+          // Check the authentication state
+          firebase.auth().onAuthStateChanged(function (user) {
+            const loginLink = document.getElementById("login-link");
+        
+            if (user) {
+              // User is logged in, hide the login link
+              loginLink.style.display = "none";
+            } else {
+              // User is not logged in, show the login link
+              loginLink.style.display = "block";
+            }
+          });
+        </script>
+        <script>
+          // Initialize Firebase and check authentication state
+          // ...
+        
+          // Get the logout link element
+          const logoutLink = document.getElementById("logout-link");
+        
+          // Function to logout the user
+          function logout() {
+            firebase.auth().signOut().then(function() {
+              // Sign-out successful.
+              console.log("User logged out successfully");
+            }).catch(function(error) {
+              // An error happened.
+              console.log("Error logging out user:", error);
+            });
+          }
+        
+          // Listen for authentication state changes
+          firebase.auth().onAuthStateChanged(function (user) {
+            const loginLink = document.getElementById("login-link");
+            const userNameElement = document.getElementById("user-name");
+        
+            if (user) {
+              // User is logged in
+              loginLink.style.display = "none"; // Hide login link
+              logoutLink.style.display = "block"; // Show logout link
+              userNameElement.textContent = "Welcome, " + user.displayName;
+            } else {
+              // User is not logged in
+              loginLink.style.display = "block"; // Show login link
+              logoutLink.style.display = "none"; // Hide logout link
+              userNameElement.textContent = "";
+            }
+          });
+        </script>
+
+        <!-- Hero Start -->
+        <div class="hero">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-text">
+                            <h1> Exercises For Good Health</h1>
+                            <p>
+                             To enjoy the glow of good health you must exercise<br>
+                             <i> -Gene Tunney</i>
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                          <!--  <img src="img/" alt="Hero Image"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+
+        <!-- About Start-->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-6">
+                      <!--   <div class="about-img">
+                            <img src="img/best.jpg" alt="Image">
+                        </div>-->
+
+                        <div class="calculator">
+                            <h2><small><b>  Burning Exercise Calculator</b></small> </h2>
+                            <label for="exercise">Select Exercise:</label>
+                            <select id="exercise">
+                                <option value="briskWalking">Brisk Walking</option>
+                                <option value="running">Running</option>
+                                <option value="cycling">Cycling</option>
+                                <option value="swimming">Swimming</option>
+                                <option value="pushUps">Push-ups</option>
+                                <option value="squats">Squats</option>
+                                <option value="lunges">Lunges</option>
+                                <option value="planks">Planks</option>
+                                <option value="weightlifting">Weightlifting</option>
+                                <option value="resistanceBands">Resistance Bands</option>
+                                <option value="yoga">Yoga</option>
+                                <option value="pilates">Pilates</option>
+                                <option value="taiChi">Tai Chi</option>
+                                <option value="aerobicWorkouts">Aerobic Workouts</option>
+                                <option value="hiit">High-Intensity Interval Training (HIIT)</option>
+                                <option value="resistanceTraining">Resistance Training</option>
+                                <option value="hathaYoga">Hatha Yoga</option>
+                                <option value="vinyasaYoga">Vinyasa Yoga</option>
+                                <option value="ashtangaYoga">Ashtanga Yoga</option>
+                                <option value="bikramYoga">Bikram (Hot) Yoga</option>
+                                <option value="mindfulnessMeditation">Mindfulness Meditation</option>
+                                <option value="transcendentalMeditation">Transcendental Meditation</option>
+                                <option value="guidedMeditation">Guided Meditation</option>
+                                <option value="yogaNidra">Yoga Nidra</option>
+                            </select>
+                            <label for="duration">Duration (minutes):</label>
+                            <input type="number" id="duration" placeholder="Enter duration in minutes">
+                            <button id="calculate">Calculate</button>
+                            <div id="result">
+                                <p>You burned <span id="caloriesBurned">0</span> calories during this exercise.</p>
+                            </div>
+                        </div>
+                        <script src="js/Kilocalorie.js"></script>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="section-header text-left">
+                            <p>Learn About Us</p>
+                            <h3><small> is it important to exercise with PCOS?</small> </h3>
+                        </div>
+                        <div class="about-text">
+                            <p>
+     
+                                Studies have found that women with PCOS who exercised regularly had regular periods, 
+                                had a lower risk of anovulation (a condition where there is a lack of ovulation), 
+                                lower levels of androgens (male hormones) leading to a decrease in the secondary symptoms of PCOS
+                                 such as hair loss, acne and excess body hair.
+                                 <br> Moderate exercise like brisk walking, jogging, cycling or 
+                                 swimming are all great activities that can help with PCOS. 
+                                This type of exercise increases your bodies sensitivity to insulin, which reduces
+                                 your risk of cardiovascular disease and type 2 diabetes.
+                            </p>
+                        
+                            <a class="btn"  href="gallary.html">Image Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Service Start -->
+        <div class="service">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>What we do</p>
+                    <h2>Exercises For PCOS</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout"></i>
+                            </div>
+                            <h3>Heal emotions</h3>
+                            <p>
+                                “You have the power to heal your life, and you need to know that.
+                                 We think so often that we are helpless, but we're not. 
+                                 We always have the power of our minds Claim and consciously use your power.”
+                               <I>― Louise L. Hay </I>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item active">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-1"></i>
+                            </div>
+                            <h3>Body Refreshes</h3>
+                            <p>
+                                Refresh and renew yourself,<br> your body, your mind, your spirit. <br>Then get back to work.
+                                <br>There is a time for work and play.<br> <br> <I> -Ralph Marston</I>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-2"></i>
+                            </div>
+                            <h3>Mind & Serenity</h3>
+                            <p>
+                                God grant me the serenity to accept the things I cannot change, <br>the courage to change the things I can, and the wisdom to know the difference.<br><I>-Reinhold Niebuhr</I>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-3"></i>
+                            </div>
+                            <h3>Enjoy Your life</h3>
+                            <p>
+                                “Learn to enjoy every minute of your life. Be happy now. Don't wait for something outside of yourself to make you happy in the future. 
+                                Think how really precious is the time you have to spend at work or with your family. Every minute should be enjoyed and savored.”
+― Earl Nightingale
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-workout-4"></i>
+                            </div>
+                            <h3>Body & Spirituality</h3>
+                            <p>
+                                “Nothing binds you except your thoughts; nothing limits you except your fear; and nothing controls you except your beliefs.” <br> <I>-Marianne Williamson</I> <br>
+                                “If god is all you have, you have all you need.” 
+                                <br> <I> -John 14:8 </I>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="1s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="flaticon-yoga-pose"></i>
+                            </div>
+                            <h3>Body & Mind</h3>
+                            <p>
+                                Physical health and emotional health are not two separate systems but are intimately intertwined -known as the mind-body 
+                                connection means that our thoughts, feelings, beliefs, and attitudes can positively or negatively affect our biological functioning. In other words, our minds can .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Class Start -->
+        <div class="class">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Our Exercises</p>
+                    <h2>Exercises Shedule</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="class-filter">
+                            <li data-filter="*" class="filter-active">All Exercises</li>
+                            <li data-filter=".filter-1">Cardiovascular Exercises</li>
+                            <li data-filter=".filter-2">Strength Training</li>
+                            <li data-filter=".filter-3">High-Intensity Interval Training (HIIT)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row class-container">
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="class-wrap">
+                            <div class="class-img">
+                                <img src="img/cr.webp" alt="Image">
+                            </div>
+                            <div class="class-text">
+                               
+                                <h2>High knees</h2>
+                                <div class="class-meta">
+                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                    <p><i class="far fa-clock"></i>7:00 - 8:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="class-wrap">
+                            <div class="class-img">
+                                <img src="img/Alie.gif" alt="Image">
+                            </div>
+                            <div class="class-text">
+                                
+                                <h2>Squat</h2>
+                                <div class="class-meta">
+                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                    <p><i class="far fa-clock"></i>7:00 - 8:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="class-wrap">
+                            <div class="class-img">
+                                <img src="img/Air-Squat-Calf-Raise.gif" alt="Image">
+                            </div>
+                            <div class="class-text">
+                                
+                                <h2>Air-Squat-Calf-Raise</h2>
+                                <div class="class-meta">
+                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                    <p><i class="far fa-clock"></i>7:00 - 8:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="class-wrap">
+                            <div class="class-img">
+                                <img src="img/cr2.webp" alt="Image">
+                            </div>
+                            <div class="class-text">
+                                
+                                <h2>InchWorms</h2>
+                                <div class="class-meta">
+                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                    <p><i class="far fa-clock"></i>7:00 - 8:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="class-wrap">
+                            <div class="class-img">
+                                <img src="img/short.gif" alt="Image">
+                            </div>
+                            <div class="class-text">
+                               
+                                <h2>Push-ups</h2>
+                                <div class="class-meta">
+                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                    <p><i class="far fa-clock"></i>7:00 - 8:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 class-item filter-3 wow fadeInUp" data-wow-delay="1s">
+                        <div class="class-wrap">
+                            <div class="class-img">
+                                <img src="img/AfraidPerfectHare-size_restricted.gif" alt="Image">
+                            </div>
+                            <div class="class-text">
+                                
+                                <h2>Mountain climber</h2>
+                                <div class="class-meta">
+                                    <p><i class="far fa-calendar-alt"></i>Sun, Tue, Thu</p>
+                                    <p><i class="far fa-clock"></i>7:00 - 8:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Class End -->
+        
+        
+        <!-- Discount Start -->
+        <div class="discount wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>A Little progress</p>
+                    <h2>Each<span>Day</span> <br><br> <small>Adds Up To Big Result </small>  </h3>
+                </div>
+                <div class="container discount-text">
+                    <p>
+                        Exercising is most essential for proper health and fitness. Moreover, it is essential for every sphere of life.
+                         the junk food we consume every day can hamper our quality of life.<br>
+
+                        If you are not healthy, you cannot lead a happy life and won’t be able to contribute to the expansion of society. Thus, one needs to exercise to beat all these problems.
+                         But, it is not just about the youth but also about every member of the society.
+                    </p>
+                    <a class="btn" href="gallary.html">Image gallary</a>
+                </div>
+            </div>
+        </div>
+        <!-- Discount End -->
+        
+        
+        <!-- Price Start -->
+        <div class="price">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Exersices Package</p>
+                    <h2> Pricing Plan</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Basic</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small><span>/ month</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Personal Trainer</li>
+                                        <li>Special Class</li>
+                                        <li>Free Tutorials</li>
+                                        <li>Group Training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Join Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="price-item featured-item">
+                            <div class="price-header">
+                                <div class="price-status">
+                                    <span>Popular</span>
+                                </div>
+                                <div class="price-title">
+                                    <h2>Standard</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small><span>/ month</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Personal Trainer</li>
+                                        <li>Special Class</li>
+                                        <li>Free Tutorials</li>
+                                        <li>Group Training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Join Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Premium</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small><span>/ month</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Personal Trainer</li>
+                                        <li>Special Class</li>
+                                        <li>Free Tutorials</li>
+                                        <li>Group Training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Join Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Price End -->
+        
+        
+        <!-- Testimonial Start -->
+        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Testimonial</p>
+                    <h2>Our Client Say!</h2>
+                </div>
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                
+                            </p>
+                            <h3>Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                               
+                            </p>
+                            <h3> Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                               
+                            </p>
+                            <h3>Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                             
+                            </p>
+                            <h3> Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Team Start -->
+        <div class="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Yoga Trainer</p>
+                    <h2>Expert Yoga Trainer</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/akshaya.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@akshayaagnes/videos"><i class="fab fa-youtube"></i></a>
+                                    <a href="facebook.com/move.with.agnes"><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="instagram.com/move.with.agnes"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Akshaya Agnes</h2>
+                                <p>Yoga Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/lucy.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@lucywyndhamread/videos"><i class="fab fa-youtube"></i></a>
+                                    <a href="facebook.com/LWRFitness"><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="instagram.com/lucywyndhamread"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Lucy Wyndham-Read</h2>
+                                <p>pcos Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/Erika.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@ThePCOSPersonalTrainer/videos"><i class="fab fa-youtube"></i></a>
+                                    <a href="pinterest.com/erikavolkfitness"><i class="fab fa-pinterest"></i></a>
+                                    <a href="facebook.com/ErikaVolkFitness"><i class="fab fa-facebook-f"></i></a>
+                                   
+                                    <a href="instagram.com/erikavolk_pcospersonaltrainer/?hl=en"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Erika</h2>
+                                <p>pcos Trainer </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/Tallene.jpg" alt="Image">
+                                <div class="team-social">
+                                    <a href="https://www.youtube.com/@PCOSWeightLoss/videos"><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="instagram.com/pcos.weightloss"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team-text">
+                                <h2>Tallene </h2>
+                                <p>pcos Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+        <!-- Blog Start -->
+        <div class="blog">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>From Blog</p>
+                    <h2>Latest Yoga Articles</h2>
+                </div>
+                <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-1.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2></h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i> VEERA BLOG</p>
+                                <p><i class="far fa-calendar-alt">2023</i> </p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>Polycystic Ovary Syndrome (PCOS) Workout Routine & Exercise Plan
+                            </p>
+                            <a class="btn" href="https://veerahealth.com/category/pcos//">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-2.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Verywell Health</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>By Angela Grassi, MS, RDN, LDN. </p>
+                                <p><i class="far fa-calendar-alt"></i>February 27, 2022
+                                </p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <a class="btn" href="https://www.verywellhealth.com/the-best-exercises-for-pcos-2616677">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-3.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>artical 2</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
+                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>
+                                PCOS: Exercise Dos And Don'ts
+                            </p>
+                            <a class="btn" href="https://www.sweat.com/blogs/fitness/best-exercise-for-pcos">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-4.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Rhiannon K. Patten, Russell A.</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i></p>
+                                <p><i class="far fa-calendar-alt"></i>Publish Year: 2020</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-5.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Nigel K. Stepto</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i></p>
+                                <p><i class="far fa-calendar-alt"></i>Publish Year: 2019</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>
+                               
+                            </p>
+                            <a class="btn" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6905185/">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img src="img/blog-6.jpg" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>Amie Woodward</h2>
+                            <div class="blog-meta">
+                                <p><i class="far fa-list-alt"></i>Body Fitness</p>
+                                <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                <p><i class="far fa-comments"></i>5</p>
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/32342454/">Read More <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+   <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">About Us</h4>
+            </div>
+            <div class="info-sec">
+              <p>The primary purpose of a PCOS sangat must be to increase awareness of PCOS
+                and to provide health care information on that disease 
+                and its management.being aware of a disease and its symptoms means people are 
+              more likely to take preventative actions, and go for screening, test, and checkups </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Quick Links</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="quick-info">
+                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
+                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Follow us</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="social-icon">
+                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
+              -->
+              Designed by <a>student of UOB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

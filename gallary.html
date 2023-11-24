@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(121, 11, 84);
+            color: #fff;
+        }
+
+        .exercise-container {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .exercise-column {
+            flex: 1;
+        }
+
+        .exercise-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .exercise {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .exercise:hover {
+            transform: scale(1.05);
+        }
+
+        .download-link {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercise Gallery</h1>
+    </header>
+
+    <div class="exercise-container">
+        <!-- Yoga Column -->
+        <div class="exercise-column">
+            <h2>Yoga</h2>
+            <div class="exercise-section">
+                <img class="exercise" src="img/yoga1.gif" alt="Yoga Pose 2">
+                <img class="exercise" src="img/yogA2.gif" alt="Yoga Pose 1">
+                <img class="exercise" src="img/yor3.gif" alt="Yoga Pose 2">
+                <img class="exercise" src="img/yoga5.jpg" alt="Yoga Pose 2">
+                <img class="exercise" src="img/yoga4.gif" alt="Yoga Pose 2">
+                <!-- Add more yoga exercise images here -->
+            </div>
+        </div>
+
+        <!-- Cardio Column -->
+        <div class="exercise-column">
+            <h2>Cardio</h2>
+            <div class="exercise-section">
+                <img class="exercise" src="img/cr.webp" alt="Running 1">
+                <img class="exercise" src="img/cr3.gif" alt="Cycling 1">
+                <img class="exercise" src="img/cr2.webp" alt="Cycling 1">
+                <img class="exercise" src="img/cr4.gif" alt="Cycling 1">
+               
+              
+                <!-- Add more cardio exercise images here -->
+            </div>
+        </div>
+
+        <!-- Strength Training Column -->
+        <div class="exercise-column">
+            <h2>Strength Training</h2>
+            <div class="exercise-section">
+                <img class="exercise" src="img/strenth2.gif" alt="Weightlifting 1">
+                <img class="exercise" src="img/Alie.gif" alt="Push-ups 1">
+                <img class="exercise" src="img/ecer2.gif" alt="Push-ups 1">
+                <img class="exercise" src="img/Air-Squat-Calf-Raise.gif" alt="Push-ups 1">
+              
+                <!-- Add more strength training exercise images here -->
+            </div>
+        </div>
+
+        <!-- Meditation Column -->
+        <div class="exercise-column">
+            <h2>Meditation</h2>
+            <div class="exercise-section">
+                <img class="exercise" src="img/med.jpg" alt="Meditation 2">
+                <img class="exercise" src="img/Meditation.jpg" alt="Meditation 1">
+                
+                <!-- Add more meditation exercise images here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="download-link">
+        <!-- Provide download links for each exercise image -->
+        <a href="yoga-1.jpg" download>Download Yoga Pose 1</a>
+        <a href="yoga-2.jpg" download>Download Yoga Pose 2</a>
+        <a href="running-1.jpg" download>Download Running Image 1</a>
+        <a href="weightlifting-1.jpg" download>Download Weightlifting Image 1</a>
+        <!-- Add more download links here for other exercises -->
+    </div>
+     <!-- Calorie Burn Rates -->
+     <div class="calorie-rates">
+        <h2>Calories Burned per Hour</h2>
+        <ul>
+            <li>Yoga: 200</li>
+            <li>Running: 600</li>
+            <li>Cycling: 500</li>
+            <li>Swimming: 700</li>
+            <li>Push-Ups: 350</li>
+            <li>Squats: 250</li>
+            <li>Lunges: 300</li>
+            <li>Planks: 200</li>
+            <li>Weightlifting: 400</li>
+            <li>Resistance Bands: 300</li>
+            <li>Pilates: 250</li>
+            <li>Tai Chi: 150</li>
+            <li>Aerobic Workouts: 500</li>
+            <li>HIIT: 700</li>
+            <li>Resistance Training: 400</li>
+            <li>Hatha Yoga: 150</li>
+            <li>Vinyasa Yoga: 300</li>
+            <li>Ashtanga Yoga: 400</li>
+            <li>Bikram Yoga: 450</li>
+            <li>Mindfulness Meditation: 50</li>
+            <li>Transcendental Meditation: 75</li>
+            <li>Guided Meditation: 60</li>
+            <li>Yoga Nidra: 90</li>
+        </ul>
+    </div>
+</body>
+</html>

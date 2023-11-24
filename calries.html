@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> calories page</title>
+    <style>
+        body {
+            background-image: url("img/background.png");
+            background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: rgb(121, 11, 84);
+    color: white;
+    padding: 10px;
+}
+
+.calculator {
+    width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(121, 11, 84);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+
+    </style>
+
+</head>
+<body>
+    <h1>Daily Calorie Intake Calculator</h1>
+    <div class="calculator">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            
+            <option value="female">Female</option>
+        </select>
+
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" placeholder="Enter your age" />
+
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" placeholder="Enter your weight" />
+        <select id="weight-unit">
+            <option value="kg">Kg</option>
+            <option value="lb">Lb</option>
+        </select>
+
+        <label for="height">Height:</label>
+        <input type="number" id="height-feet" placeholder="Feet" />
+        <input type="number" id="height-inches" placeholder="Inches" />
+        <input type="number" id="height-cm" placeholder="Centimeters" />
+
+        <label for="activity-level">Activity Level:</label>
+        <select id="activity-level">
+            <option value="sedentary">Sedentary (little or no exercise)</option>
+            <option value="lightly-active">Lightly active (light exercise or sports 1-3 days a week)</option>
+            <option value="moderately-active">Moderately active (moderate exercise or sports 3-5 days a week)</option>
+            <option value="very-active">Very active (hard exercise or sports 6-7 days a week)</option>
+        </select>
+
+        <button id="calculate">Calculate</button>
+
+        <div id="result">
+            Your estimated daily calorie intake is: <span id="calories">0</span> calories.<br>
+            <small> "Everyone sees how hard they work differently and things can change. Imagine your calorie guess as a beginning point, like a place to start. If you find you're working harder or easier than before, you can change how much you eat to match."</small>
+            <div class="danger">
+                <p><strong>Note!</strong> <small>If you're pregnant or breast-feeding, are a competitive athlete, or have a metabolic disease, such as diabetes, the calorie calculator may overestimate or underestimate your actual calorie needs.</small></p>
+              </div>
+              
+            
+        </div>
+    </div>
+
+  
+   
+    <script src="js/calries.js"></script>
+</body>
+</html>

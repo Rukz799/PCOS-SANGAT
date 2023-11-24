@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit="no">
+  <title>PCOS SANGAT</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+ <style>
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: rgb(121, 11, 84);
+	font-size: 300;
+	font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	color: rgb(121, 11, 84);
+}
+a, a:hover, a:focus, a:active{
+    outline: none;
+}
+
+.section-padding{
+	padding: 60px 0px;
+  padding-left: 60px;
+
+}
+h2 {
+    line-height: 20px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+hr.botm-line {
+    height: 3px;
+    width: 60px;
+    background: rgb(121, 11, 84);
+    position: relative;
+    border: 0;
+    margin: 20px 0 20px 0;
+}
+
+/***************************************
+banner
+***************************************/
+.navbar {
+
+    margin-bottom: 0px;
+    border: 0px;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-default {
+    background-color: rgb(121, 11, 84);
+    padding: 20px 0;
+    transition: all 0.3s;
+}
+.navbar-default {
+    background-color:rgb(121, 11, 84);
+    border: 0px;
+}
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-brand
+{
+	font-family: 'Chewy', cursive;
+	font-size: 32px;
+}
+
+.navbar-brand img {
+padding-top: 5px;
+    width: 60px !important;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #EA6045;
+}
+
+@media (max-width: 768px) {
+	.navbar-collapse {
+		background: rgb(121, 11, 84);
+	}
+}
+
+.top-nav-collapse {
+    padding: 0;
+    background:  rgb(121, 11, 84);
+}
+
+.white, .white:hover, .white:focus
+{
+	color:  rgb(121, 11, 84);
+	width: 100% !important;
+}
+.block
+{
+	display: block;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #fff;
+    text-transform: uppercase;
+    background-color:  rgb(121, 11, 84);
+}
+.navbar-default .navbar-nav > li > a
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 300;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+{
+	color: #fff;
+    text-transform: uppercase;
+    background-color:  rgb(121, 11, 84);
+}
+.affix {
+    background-color: #ffffff !important;
+}
+.affix .navbar-nav > li > a:hover, .affix .navbar-nav > li > a:focus
+{
+    background-color:   rgb(121, 11, 84)!important;
+}
+
+/* Style the dropdown container */
+.dropdown {
+    font-size: 14px;
+    padding: 4px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the button that opens the dropdown */
+  .dropdown button {
+    background-color: rgb(121, 11, 84);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown content when the button is hovered over */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+ .row {
+    line-height: 1.6;
+    text-align: justify;
+ }
+ .sidebar {
+  margin: 0;
+  padding-top: 6%;
+  width: 220px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: rgb(121, 11, 84);
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: rgb(121, 11, 84);
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+/***************************************
+footer
+***************************************/
+#footer {
+	background-color: rgb(121, 11, 84);
+ box-sizing: border-box;
+ position: relative;
+}
+.ftr-tle {
+    height: 50px;
+}
+.info-sec {
+    color: #fff;
+}
+.quick-info li i {
+    font-size: 8px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: left;
+}
+.social-icon li {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 5px;
+}
+.bglight-blue {
+    background-color: #3498DB;
+}
+.bgred {
+    background-color: #E74C3C;
+}
+.bgdark-blue {
+    background-color: #2C3E50;
+}
+.bglight-blue {
+    background-color: #3498DB;
+}
+.top-footer {
+    padding: 40px 0px;
+    border-bottom: 1px solid rgba(207, 98, 184, 0.12);
+}
+.footer-line {
+    padding: 30px 0px;
+    color: #fff;
+}
+
+.footer-line a {
+    color: #cc69a0;
+}
+
+.quick-info li a{
+    color: #fff;
+}
+.site-link, .site-link:hover, .site-link:focus
+{
+    color: #c0319c;
+    text-transform: none;
+}
+@media (min-width: 551px) and (max-width: 980px){
+
+}
+@media (min-width: 220px) and (max-width: 551px){
+    .testi-info{
+        margin-bottom: 20px;
+    }
+    .marb20{
+        margin-top: 30px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .section-title{
+        margin-bottom: 30px;
+    }
+    .medi-info {
+    border: 0px;
+    border-bottom: 1px solid #fff;
+    }
+    .service-info{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .caption h3 {
+    font-size: 14px;
+    }
+    .caption p{
+    font-size: 12px;
+    padding-bottom: 5px;
+    }
+    .caption ul li a i{
+        font-size: 14px;
+    }
+    .banner-text h1{
+        font-size: 24px;
+    }
+}
+
+ </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="#"><img src="img/TD Kalayaan (2).png" class="img-responsive" style="width: 50px; margin-top: -16px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class=""> <a href="index.html"> Home</a></li>
+               <li class="" ><a href="index.html" class="nav-item nav-link">SARVICES</a></li>
+               <li class=""> <a href="index.html" class="nav-item nav-link">SYMTOMS</a></li>
+               
+               <li class="">
+                 <!-- Create the dropdown container -->
+                <div class="dropdown">
+                  <!-- Button to open the dropdown -->
+                  <button><a href="#search diseases"></a>SEARCH DISEASES</button>
+                  <!-- Dropdown content -->
+                  <div class="dropdown-content">
+                    <a href="pcos disease.html">PCOS disease</a>
+                    <a href="#">others..</a>
+                   </li>
+                    <li class=""><a href="Exercise.html">Exercises</a></li>
+                    <li class=""><a href="Diet.html">DIET CHART</a></li>
+                    <li class="" ><a href="contact.html">Contact us </a>
+                <li class=""><a href="survey form.html" >PCOS Survey</a>
+                  <li class="" id="login-link" style="display: none;"><a href="login.html">Login</a></li>
+                  <li id="logout-link" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                  <li><a href="dashboard.html" id="user-name"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+      <script src="js/firebase-config.js"></script>
+      <script>
+          // Initialize Firebase
+          if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
+  
+          // Get a reference to the Firestore database
+          var db = firebase.firestore();
+  
+          // Listen for authentication state changes
+          firebase.auth().onAuthStateChanged(function (user) {
+              if (user) {
+                  console.log("User is logged in:", user);
+  
+                  // User is logged in, retrieve their name from Firestore
+                  const userId = user.uid;
+                  const userDetailRef = db.collection("user_details").doc(userId);
+  
+                  userDetailRef.get().then((doc) => {
+                      if (doc.exists) {
+                          console.log("User details found:", doc.data());
+  
+                          const userNameElement = document.getElementById("user-name");
+                          const userData = doc.data();
+                          userNameElement.textContent = "Welcome, " + userData.name;
+                      } else {
+                          console.log("No user details found");
+                      }
+                  }).catch((error) => {
+                      console.log("Error retrieving user details:", error);
+                  });
+              } else {
+                  console.log("User is not logged in");
+                  // User is not logged in, handle this case as needed
+              }
+          });
+      </script>
+      <script>
+        // Initialize Firebase
+        if (!firebase.apps.length) {
+          firebase.initializeApp(firebaseConfig);
+        }
+      
+        // Check the authentication state
+        firebase.auth().onAuthStateChanged(function (user) {
+          const loginLink = document.getElementById("login-link");
+      
+          if (user) {
+            // User is logged in, hide the login link
+            loginLink.style.display = "none";
+          } else {
+            // User is not logged in, show the login link
+            loginLink.style.display = "block";
+          }
+        });
+      </script>
+      <script>
+        // Initialize Firebase and check authentication state
+        // ...
+      
+        // Get the logout link element
+        const logoutLink = document.getElementById("logout-link");
+      
+        // Function to logout the user
+        function logout() {
+          firebase.auth().signOut().then(function() {
+            // Sign-out successful.
+            console.log("User logged out successfully");
+          }).catch(function(error) {
+            // An error happened.
+            console.log("Error logging out user:", error);
+          });
+        }
+      
+        // Listen for authentication state changes
+        firebase.auth().onAuthStateChanged(function (user) {
+          const loginLink = document.getElementById("login-link");
+          const userNameElement = document.getElementById("user-name");
+      
+          if (user) {
+            // User is logged in
+            loginLink.style.display = "none"; // Hide login link
+            logoutLink.style.display = "block"; // Show logout link
+            userNameElement.textContent = "Welcome, " + user.displayName;
+          } else {
+            // User is not logged in
+            loginLink.style.display = "block"; // Show login link
+            logoutLink.style.display = "none"; // Hide logout link
+            userNameElement.textContent = "";
+          }
+        });
+      </script>
+<div> 
+      <div class="sidebar">
+        <a class="active" href="">OverAll PCOS</a>
+        <a href="Infertility.html">Infertility</a>
+        <a href="Pregnancy loss.html">PCOS Pregnancy Loss</a>
+        <a href="chronic Diseases.html">Risk for chronic diseases</a>
+      </div>
+     </section>
+      <section> 
+      <section id="service" class="section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-sm-4"><br>
+        
+              <br><br>
+              <h2>What is polycystic ovarian syndrome?</h2><br>
+           
+                <p>Polycystic ovary syndrome (PCOS) is a hormonal imbalance that occurs when your ovaries (the organ that produces and releases eggs) create excess hormones.
+                   If you have PCOS, your ovaries produce unusually high levels of hormones called androgens. This causes your reproductive hormones to become imbalanced.
+                    As a result, people with PCOS often have irregular menstrual cycles, missed periods and unpredictable ovulation. Small follicle cysts (fluid-filled 
+                    sacs with immature eggs) may be visible on your ovaries on ultrasound due to lack of ovulation (anovulation). However, despite the name "polycystic,"
+                     you don’t need to have cysts on your ovaries to have PCOS. The ovarian cysts aren’t dangerous or painful.
+                     
+                     <br><img src="img/pcod.jpg" alt="symptom" class=" center"> <br>
+                    
+                <br> PCOS is one of the most common causes of infertility in women and people assigned female at birth (AFAB). It can also increase your risk of other health conditions. Your healthcare provider can treat PCOS based on your symptoms and if you wish to become pregnant.
+                </p><br>
+
+                
+                <h4>What age does PCOS start?</h4><br>
+               <p> Women and people AFAB can get PCOS any time after puberty. Most people are diagnosed in their 20s or 30s when they’re 
+                trying to get pregnant. You may have a higher chance of getting PCOS if you have obesity or if other people in your biological family have PCOS. </p> <br>
+               <h2> What are the signs of polycystic ovary syndrome (PCOS)?</h2> <br>
+<h3>  most common signs and symptoms of PCOS include:
+
+</h3>
+<h4> Irregular periods: </h4><br>
+<p> </p>Abnormal menstruation involves missing periods or not having a period at all. It may also involve heavy bleeding during periods.
+<h4>Abnormal hair growth: </h4><br>
+<p> You may grow excess facial hair or experience heavy hair growth on your arms, chest and abdomen (hirsutism). This affects up to 70% of people with PCOS.</p> 
+<h4>Acne: </h4>
+<p>PCOS can cause acne, especially on your back, chest and face. This acne may continue past your teenage years and may be difficult to treat.
+    <h4>Obesity:  </h4>   </p> 
+<p>
+    Between 40% and 80% of people with PCOS have obesity and have trouble maintaining a weight that’s healthy for them.
+    Darkening of the skin: You may get patches of dark skin, especially in the folds of your neck, armpits, groin (between the legs) and under your breasts. This is known as acanthosis nigricans.
+    Cysts:
+</p>
+<p>Many people with PCOS have ovaries that appear larger or with many follicles (egg sac cysts) on ultrasound.
+
+</p> 
+<h4>Skin tags: </h4>
+
+<p> Skin tags are little flaps of extra skin. They’re often found in your armpits or on your neck.
+</p>
+<h4>
+  Thinning hair:
+</h4>
+
+<p>
+    People with PCOS may lose patches of hair on their head or start to bald.
+</p>
+<h4>Infertility: 
+
+</h4>
+
+<p> PCOS is the most common cause of infertility in people AFAB. Not ovulating regularly or frequently can result in not being able to conceive.</p>
+ <br.<p>Can I have PCOS but not have any symptoms?
+  Yes, it’s possible to have PCOS and not have any symptoms. Many people don’t even realize they have the condition until they have trouble getting pregnant or are gaining
+   weight for unknown reasons. It’s also possible to have mild PCOS, where the symptoms aren’t severe enough for you to notice</p>
+<br>
+<h2>What is the main cause of PCOS? </h2><br>
+<p> The exact cause of PCOS is unknown. There's evidence that genetics play a role. Several other factors, most importantly obesity, also play a role in causing PCOS:
+
+  <h3>Higher levels of male hormones called androgens:  </h3>
+  <p> High androgen levels prevent your ovaries from releasing eggs, which causes irregular menstrual cycles. 
+  Irregular ovulation can also cause small, fluid-filled sacs to develop on your ovaries. High androgen also causes acne and excess hair growth in women and people AFAB.
+  
+  <h3> Insulin resistance:</h3> <br>
+   An increase in insulin levels causes your ovaries to make and release male hormones (androgens). Increased male hormones suppress ovulation 
+  and contribute to other symptoms of PCOS. Insulin helps your body process glucose (sugar) and use it for energy. Insulin resistance means your body doesn’t process insulin correctly,
+   leading to high glucose levels in your blood. Not all individuals with insulin resistance have elevated glucose or diabetes, but insulin resistance can lead to diabetes.
+    Having overweight or obesity can also contribute to insulin resistance. An elevated insulin level, even if your blood glucose is normal, can indicate insulin resistance.
+  Low-grade inflammation: People with PCOS tend to have chronic low-grade inflammation. Your healthcare provider can perform blood tests that measure levels 
+  of C-reactive protein (CRP) and white blood cells, which can indicate the level of inflammation in your body.
+ 
+  <h3>Can PCOS cause a miscarriage?
+
+  </h3>
+  Having PCOS may increase your risk for certain pregnancy complications, although most women and people AFAB with PCOS are able to successfully carry a pregnancy.
+   Other complications of PCOS related to pregnancy include increased risk of:<br><br>
+  
+  <b>Gestational diabetes, preeclampsia and high blood pressure.<br><br>
+    Preterm birth (birth before 37 weeks of pregnancy) or C-section delivery due to obesity, diabetes or high blood pressure. </b> <br> <br>
+  
+    <h2>  DIAGNOSIS AND TESTS</h2> <br>
+  <h3>  How is polycystic ovary syndrome (PCOS) diagnosed? </h3> 
+
+  In most cases, your healthcare provider can diagnose PCOS after an examination and discussing your symptoms. They may order blood tests or perform an ultrasound to help with 
+  the diagnosis.
+ <h3>Your healthcare provider will: </h3> <br>
+
+
+Talk to you about your symptoms and medical history.
+Ask about your biological family’s medical history.
+Take your weight and blood pressure.
+Perform a physical exam, looking specifically for excess facial hair, hair loss, acne, discolored skin and skin tags.
+Perform a pelvic exam to look for other causes of abnormal bleeding.
+Order blood tests to check hormone levels and glucose levels.
+Perform a pelvic ultrasound to look at your ovaries, check the thickness of your uterine lining and look for other causes of abnormal bleeding.
+What are the three symptoms to diagnose PCOS?
+Typically, healthcare providers diagnose PCOS if you have at least two of the three symptoms:
+
+Irregular or missed periods. Some people with PCOS have very heavy bleeding when they do have a period.
+Signs of excess androgens such as acne or excessive hair growth. Or a blood test confirming high androgen levels.
+Enlarged ovaries or polycystic appearance of ovaries on ultrasound. Many people don’t develop cysts.
+</p>
+
+<p> <h3>
+  MANAGEMENT AND TREATMENT<br><br>
+  How is polycystic ovary syndrome treated?
+</h3>
+  Your healthcare provider will determine treatment based on your symptoms, medical history and other health conditions, and if you want to get pregnant.
+   Treatments can include medications, lifestyle changes or a combination of both.<br>
+  
+<br>  <b>If you don’t plan to become pregnant, treatments include:  </b> <br>
+  Hormonal birth control: Options include birth control pills, patches, shots, a vaginal ring or an intrauterine device (IUD). 
+  Hormonal birth control helps to regulate your menstrual cycle, some forms will also improve acne and help with excess hair growth.
+  Insulin-sensitizing medicine: Metformin is a drug used to treat diabetes. It works by helping your body process insulin. Once insulin is under control,
+   some people with PCOS see improvements in their menstrual cycles.<br>
+<br> <b>Medications to block androgens: </b> <br> Some medications can block the effect of androgens. This helps control acne or hair growth.
+  Talk to your healthcare provider about whether such treatment is right for you.<br>
+ <br><b> Lifestyle changes: </b> Eating a nutritious diet and maintaining a body weight that’s healthy for you can have a positive effect on insulin levels.
+  
+  <h3> If you want to become pregnant now or in the future, treatment for PCOS includes:</h3>
+  <br>
+ <b> Drugs to induce ovulation (releasing an egg):</b> <br>
+   A successful pregnancy begins with ovulation. Certain drugs have been proven to induce ovulation in people with PCOS. The medications clomiphene and letrozole are taken orally,
+    while gonadotropins are given by injection.
+ <br>  <b> Surgery:</b> <br>
+  A surgical procedure can help restore ovulation by removing tissue in your ovaries that produces androgen hormones.
+   With newer medications available, surgeons rarely perform this procedure.
+  <br> <b> In vitro fertilization (IVF):</b> <br>
+   This is an option for people with PCOS when medication doesn’t help with ovulation. Your provider fertilizes your egg with your partner’s 
+  sperm in a lab before transferring it to your uterus.
+  
+ <h3>  Does PCOS ever go away?</h3>
+  While there isn’t a cure for PCOS, your healthcare provider can help you manage your symptoms. The effects of PCOS may change over time so that you become less aware of the condition. However, there isn’t a treatment that permanently cures it.
+  <h3>
+    Can I get pregnant if I have PCOS?
+  </h3>
+
+  Yes, you can get pregnant if you have PCOS. PCOS can make it hard to conceive while also increasing your risk for certain pregnancy complications, but many people with PCOS do get pregnant on their own. Your healthcare provider will work with you to develop a treatment plan to help you ovulate. Your treatment plan could include medication or assisted reproductive technologies like in vitro fertilization (IVF).
+  
+  Talk to your healthcare provider to make sure you understand your treatment plan and how you can increase your chances of a healthy pregnancy.<br>
+  
+  <h2> PREVENTION</h2><br>
+  <b> Can I prevent PCOS or its effects?</b><br>
+  There’s no proven way to prevent PCOS, but you can take small steps to reduce your symptoms. For example, <br>
+  <br> <B> eating nutritious foods,</B>
+  <br> <b>exercising regularly </b>  <br>
+  <b> and managing a healthy weight for your body can help you avoid the effects of PCOS.</b><br><br>
+
+  <h2> OUTLOOK / PROGNOSIS </h2>
+ 
+ <br> <b>Does PCOS put me at risk for other health conditions? </b> <br>
+  Research shows PCOS may raise your risk for several health conditions, including:
+  <br>
+  <br> Diabetes.
+  <br> High blood pressure.
+  <br>Cardiovascular disease.
+  <br> Endometrial hyperplasia.
+  <br>Endometrial cancer.
+  <br>Sleep disorders such as sleep apnea.
+  <br>Depression and anxiety.
+  <br> Talk to your healthcare provider to make sure you understand your risk for developing these conditions.
+</p>
+<br>
+<h2> LIVING WITH</h2>  <br>
+<b>How do I cope with PCOS? </b> <br>
+
+One of the best ways to cope with PCOS 
+<br> is to maintain a healthy bodyweight, 
+<br>eat nutritious foods and exercise regularly.
+<br> These changes to your lifestyle can affect hormone levels,
+<br>in turn regulating your menstrual cycle and easing your symptoms.<br>
+
+<br> <b> If excess hair growth or acne is hurting your confidence, cosmetic treatments or working with a dermatologist might be helpful.</b><br> 
+
+<br><b> Finally, </b>if you’re trying to conceive and have PCOS, know that you’re not alone. Nearly 1 in 10 people have PCOS.
+ Your healthcare provider will work with you to help you get pregnant if that’s what you want.<br>
+
+<br> <b>
+  When should I see my healthcare provider? </b><br>
+Contact a healthcare provider if you suspect you have PCOS. Some signs that may point to PCOS include:
+
+<br>An irregular menstrual cycle. Menstrual cycles are often long (longer than 40 days between periods).
+<br>Excess hair growth, 
+<br>acne or other signs of excess androgen hormones.
+<br>Difficulty getting pregnant.<br>
+
+<br> <b> FREQUENTLY ASKED QUESTIONS</b>
+<b>Is PCOS genetic? </b>
+Researchers are learning more about the causes of PCOS. However, some evidence shows PCOS has a genetic or hereditary component. 
+This means if your biological parent has PCOS, you may be more likely to have it, too.<br>
+<br> <B> What hormones affect PCOS?</B>
+
+People with PCOS have a hormonal imbalance that disrupts their menstrual cycle, ovulation and possibly,
+ conception. These hormones are like an intricate web and the function of your reproductive system relies heavily on its balance.<br>
+<br> <b>The hormones that play a role in PCOS are: </b> 
+<br>Androgens (like testosterone and androstenedione).
+<br>Luteinizing hormone (LH).
+<br>Follicle-stimulating hormone (FSH).
+<br>Estrogen.
+<br>Progesterone.
+<br>Insulin.
+</div>
+<br><img src="img/all.jpg" alt="symptom" width="60%" height="60%" class="center" > <br>
+ </section>
+
+
+ 
+  <!--/ contact-->
+  <!--footer-->
+  <footer id="footer">
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">About Us</h4>
+            </div>
+            <div class="info-sec">
+              <p>The primary purpose of a PCOS sangat must be to increase awareness of PCOS
+                and to provide health care information on that disease 
+                and its management.being aware of a disease and its symptoms means people are 
+              more likely to take preventative actions, and go for screening, test, and checkups </p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Quick Links</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="quick-info">
+                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
+                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
+                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 marb20">
+            <div class="ftr-tle">
+              <h4 class="white no-padding">Follow us</h4>
+            </div>
+            <div class="info-sec">
+              <ul class="social-icon">
+                <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                <li class="bgred"><i class="fa fa-google-plus"></i></li>
+                <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div class="credits">
+              <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Medilab
+              -->
+              Designed by <a>student of UOB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--/ footer-->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="contactform/contactform.js"></script>
+
+  
+</body>
+</html>
